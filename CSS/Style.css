@@ -1,0 +1,7 @@
+
+/*start header*/
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+/*end header*/
