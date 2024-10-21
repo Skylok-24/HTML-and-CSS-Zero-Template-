@@ -1,7 +1,35 @@
+:root {
+    --main-color : #2196f3;
+}
+body {
+    font-family: "cario" , sans-serif;
+}
 
 /*start header*/
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 200px;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+.nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.nav h2 {
+    color: var(--main-color);
+}
+.nav li:hover a {
+    color: var(--main-color);
+}
+.nav li:hover {
+    border-top: solid var(--main-color) 5px;
+}
+.nav li {
+    padding:  20px;
 }
 /*end header*/
