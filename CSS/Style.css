@@ -50,32 +50,39 @@ ul {
         width: 1170px;
     }
 }
+
 .main-title {
-    text-transform: uppercase;
-    margin: 0 auto 80px;
-    border: 2px solid black;
-    padding: 10px 20px;
-    font-size: 30px;
     width: fit-content;
+    padding: 10px 20px;
+    margin: 60px auto;
+    font-size: 30px;
+    border: solid 2px black;
     position: relative;
     z-index: 1;
-    transition: var(--main-transition);
+    transform: var(--main-transition);
 }
-.main-title::before,
-.main-title::after {
+.main-title::before {
     content: "";
+    position: absolute;
+    display: block;
     width: 12px;
     height: 12px;
     background-color: var(--main-color);
-    position: absolute;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-}
-.main-title::before {
     left: -30px;
 }
 .main-title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
     right: -30px;
 }
 .main-title:hover::before {
@@ -86,10 +93,39 @@ ul {
     z-index: -1;
     animation: right-move 0.5s linear forwards;
 }
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .main-title:hover {
     color: white;
-    border: 2px solid white;
+    border-color: white;
     transition-delay: 0.5s;
+    transition-duration: 0.2s;
 }
 .spikes {
     position: relative;
@@ -331,6 +367,23 @@ ul {
     width: 600px;
     animation: up-and-down 5s linear infinite;
 }
+@keyframes up-and-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bouncing {
+    0%, 10%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(-15px);
+    }
+}
 @media (max-width: 991px) {
     .landing .image {
         display: none;
@@ -351,3 +404,66 @@ ul {
     animation: bouncing 1.5s infinite;
 }
 /* End Landing */
+
+/*Start Articles*/
+.Articles {
+    padding-bottom: 100px;
+}
+.Articles .cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: auto auto;
+    gap: 40px;
+    width: 75%;
+    margin: auto;
+}
+.Articles .cards .card {
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 2px 7px 0px #00000017;
+    transition-duration: 0.2s;
+}
+.Articles .cards img {
+    position: relative;
+    width: 100%;
+}
+.Articles .card .text {
+    padding: 15px;
+    border-bottom: solid 0.5px #ddd;
+}
+.Articles .card .text h3 {
+    margin-bottom: 10px;
+}
+.Articles .card .text p {
+    line-height: 1.5;
+    color: #aaa;
+}
+.Articles .card .foot {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);
+}
+.Articles .card .foot a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.Articles .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.31);
+}
+.Articles .card:hover i {
+    animation: balance 0.5s linear forwards infinite;
+}
+
+@keyframes balance {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(7px);
+    }
+}
+
+/*End Articles*/
