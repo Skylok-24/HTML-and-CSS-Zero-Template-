@@ -516,3 +516,178 @@ ul {
 
 /*End Articles*/
 
+/*Start Features*/
+.Features {
+    padding-bottom: 50px;
+    position: relative;
+    /*background-color: white;*/
+}
+.Features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+}
+.Features .container .box {
+    position: relative;
+    overflow: hidden;
+    /*max-width: 30%;*/
+    border: solid 1px #ccc;
+}
+/*@media (max-width: 991px) {*/
+/*    .Features .container .box {*/
+/*        max-width: 47%;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 750px) {*/
+/*    .Features .container .box {*/
+/*        max-width: 50%;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 695px) {*/
+/*    .Features .container .box {*/
+/*        max-width: 70%;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 530px) {*/
+/*    .Features .container .box {*/
+/*        max-width: 85%;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 460px) {*/
+/*    .Features .container .box {*/
+/*        max-width: 100%;*/
+/*    }*/
+/*}*/
+/*.Features .container .box::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    background: white;*/
+/*    height: 25%;*/
+/*    z-index: -1;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%) skew(0deg, -20deg);*/
+/*    transition: 0.3s;*/
+/*}*/
+.Features .container .box:hover::before {
+    transform: translateY(-50%) skew(0deg, 20deg);
+}
+.Features .container .image {
+    position: relative;
+    max-width: 100%;
+    z-index: -2;
+}
+.Features .container .image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 130px 500px;
+    border-color: transparent transparent white transparent;
+    transition: 0.3s;
+}
+.Features .box:hover .image::after {
+    border-width: 170px 500px 170px 0px;
+}
+.Features .container .im-one::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 69, 0, 0.55);
+}
+.Features .container .im-two::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 178, 170, 0.55);
+}
+.Features .container .im-three::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 191, 255, 0.55);
+}
+.Features .container .image img {
+    width: 100%;
+}
+.Features .text {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+.Features .text h2 {
+    font-size: 40px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.Features .container .box h2::before {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    height: 5px;
+    width: 30%;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+.Features .container .box .h-one::before {
+    background-color: orangered;
+}
+.Features .container .box .h-two::before {
+    background-color: lightseagreen;
+    width: 20%;
+}
+.Features .container .box .h-three::before {
+    background-color: deepskyblue;
+    width: 35%;
+}
+.Features .text p {
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 55px;
+    color: #737373;
+}
+.Features .text a {
+    font-size: 22px;
+    font-weight: bold;
+    color: orangered;
+    border: solid orangered 3px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+}
+.Features .text .l-one {
+    color: orangered;
+    border-color: orangered;
+    /*background: linear-gradient(to right , orangered 50% , white 50%);*/
+    /*background-size:  200% 100%;*/
+    /*background-position: right bottom;*/
+}
+.Features .text .l-one::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background-color: orangered;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.Features .text .l-two {
+    color: lightseagreen;
+    border-color: lightseagreen;
+}
+.Features .text .l-three {
+    color: deepskyblue;
+    border-color: deepskyblue;
+}
+/*End Features*/
