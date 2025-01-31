@@ -828,8 +828,107 @@ ul {
     font-size: 20px;
     color: var(--main-color);
 }
-
-.team-member .card .text p {
-
-}
 /*End Team MEMBERS*/
+
+/*Start Services*/
+.services {
+    background-color: var(--section-background);
+    padding-bottom: var(--main-padding-bottom);
+    padding-top: 10px;
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+
+.services .box {
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px #c1c0c0;
+    z-index: 0;
+    position: relative;
+    transition: 0.2s linear;
+}
+
+.services .box::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 0;
+    height: 3px;
+    transition: 0.2s linear;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.services .box:hover::before {
+    width: 100%;
+}
+
+.services .box:hover {
+    transform: translateY(-10px);
+}
+
+.services .icons {
+    text-align: center;
+    padding: 25px;
+}
+
+.services .icons i {
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+
+.services .icons h3 {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.services .text {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.services .text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transform: translateX(-20px) skewX(-30deg);
+}
+
+.services .text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 44%;
+    background-color: #d1d0d0;
+    z-index: -2;
+    transform: translateX(-20px) skewX(-30deg);
+}
+
+.services .text h3 {
+    font-size: 30px;
+    color: white;
+    padding: 10px 20px;
+}
+
+.services .info {
+    display: flex;
+    align-items: center;
+}
+
+.services .info a {
+    color: var(--main-color);
+    padding: 10px;
+}
+/*End Services*/
