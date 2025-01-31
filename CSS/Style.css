@@ -414,7 +414,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 40px;
-    width: 75%;
+    width: 100%;
     margin: auto;
 }
 .Articles .cards .card {
@@ -465,6 +465,7 @@ ul {
         transform: translateX(7px);
     }
 }
+
 .Gallery {
     padding-top: 20px;
     padding-bottom: 50px;
@@ -716,7 +717,7 @@ ul {
 }
 .testimonials .image {
     position: absolute;
-    right: -10px;
+    right: 0px;
     top: -50px;
     border-radius: 50%;
     overflow: hidden;
@@ -821,6 +822,7 @@ ul {
 .team-member .card .text {
     padding: 20px;
     transform: translateX(60px);
+    width: fit-content;
 }
 
 .team-member .card .text h3 {
@@ -932,3 +934,88 @@ ul {
     padding: 10px;
 }
 /*End Services*/
+
+/*Start Our Skills*/
+.our-skills {
+    padding-bottom: var(--main-padding-bottom);
+}
+
+@media (max-width: 767px) {
+    .our-skills img {
+        display: none;
+    }
+}
+
+.our-skills .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our-skills .rate {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.our-skills .rate h3 {
+    /*margin: 10px;*/
+}
+
+.our-skills .rate div {
+    height: 35px;
+    background-color: #eeeeee;
+    position: relative;
+}
+
+.our-skills .rate div::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.our-skills .rate div::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-45px);
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.our-skills .rate .html::after {
+    content: "80%";
+}
+
+.our-skills .rate .css::after {
+    content: "85%";
+}
+
+.our-skills .rate .js::after {
+    content: "70%";
+}
+
+.our-skills .rate .python::after {
+    content: "80%";
+}
+
+.our-skills .rate .html::before {
+    width: 80%;
+}
+.our-skills .rate .css::before {
+    width: 85%;
+}
+.our-skills .rate .js::before {
+    width: 70%;
+}
+.our-skills .rate .python::before {
+    width: 80%;
+}
+/*End Our Skills*/
