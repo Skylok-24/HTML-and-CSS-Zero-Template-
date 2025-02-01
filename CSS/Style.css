@@ -1036,8 +1036,7 @@ ul {
 }
 
 .work img {
-    width: 480px;
-    height: 480px;
+   width: 80%;
 }
 
 .work .text {
@@ -1054,15 +1053,14 @@ ul {
     padding: 30px;
     align-items: center;
     background-color: #f4f4f4;
+    gap: 20px;
+    position: relative;
+    z-index: 0;
 }
 
 .work .text .speech img {
     width: 70px;
     height:70px;
-}
-
-.work .text .speech .intext {
-    margin-left: 25px;
 }
 
 .work .text .speech h3 {
@@ -1076,9 +1074,164 @@ ul {
 }
 
 @media (max-width: 995px) {
-    .work .image-1 {
-        display: none;
+    .work .container {
+        flex-direction: column;
+    }
+
+    .work .speech {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
+.work .speech::before {
+    content: "";
+    background-color: #ebeaea;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    transition: 0.2s linear;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.work .speech:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
 /*end how it work*/
+
+/*Start Latest Events*/
+ .events {
+     padding-bottom: var(--main-padding-bottom);
+     position: relative;
+ }
+
+ .events .container {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+ }
+
+ .events .container img {
+     max-width: 450px;
+ }
+
+ @media (max-width: 991px) {
+     .events .container img {
+         display: none;
+     }
+ }
+
+ .events .info {
+     flex: 1;
+     text-align: center;
+     padding: 20px;
+ }
+
+ .events .info .time {
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     margin-bottom: 30px;
+ }
+
+ .events .info .unit {
+     display: flex;
+     flex-direction: column;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     transition: var(--main-transition) linear;
+ }
+
+.events .info .unit span:first-child {
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.events .info .unit span:last-child {
+    padding: 5px 0px;
+    border-top: solid 1px #ddd;
+    font-size: 13px;
+    transition: var(--main-transition) linear;
+}
+
+ .events .info h2 {
+     font-size: 30px;
+     margin-bottom: 20px;
+ }
+
+ .events .info p {
+     font-size: 20px;
+     line-height: 1.7;
+     color: #898989;
+ }
+
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.events .subscribe form {
+    display: flex;
+    background-color: #eee;
+    padding: 30px 40px;
+    border-radius: 50px;
+    width: 600px;
+    margin: auto;
+}
+
+.events .subscribe input:first-child {
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 20px;
+    flex: 1;
+    width: 73%;
+}
+
+.events .subscribe input:first-child:focus {
+    outline: none;
+}
+
+.events .subscribe input:last-child {
+    padding: 20px;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.events .subscribe input:last-child:hover {
+    background-color: #1787e0;
+    cursor: pointer;
+}
+@media (max-width: 760px) {
+    .events .subscribe form {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .events .subscribe input:first-child {
+        width: 100%;
+    }
+}
+
+.events .unit:hover {
+    border-color: var(--main-color);
+}
+
+.events .info .unit:hover span:last-child {
+    border-color: var(--main-color);
+}
+/*End Latest Events*/
