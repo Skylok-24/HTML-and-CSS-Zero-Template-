@@ -1235,3 +1235,209 @@ ul {
     border-color: var(--main-color);
 }
 /*End Latest Events*/
+
+/*start Pricing Plans*/
+.pricing {
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: var(--section-background);
+    padding-top: 10px;
+}
+
+.pricing img:first-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    transform: translateY(150px);
+    z-index: 0;
+}
+
+.pricing img:last-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    transform: translateY(-150px);
+}
+
+.pricing .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing .box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 11px 0px #b8b6b6;
+    z-index: 1;
+}
+
+.pricing .mid {
+    transform: translateY(-20px);
+    position: relative;
+    overflow: hidden;
+}
+
+/*.pricing .mid::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background-color: var(--main-color);*/
+/*    width: 150px;*/
+/*    height: 15px;*/
+/*    transform: skewX(-45deg) rotate(45deg);*/
+/*    right: 0;*/
+/*}*/
+
+/*.pricing .mid::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background-color: var(--main-color);*/
+/*    width: 150px;*/
+/*    height: 15px;*/
+/*    transform: skewX(45deg) rotate(45deg);*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*}*/
+
+.pricing .box .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing .box .price h2 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.pricing .box .price .one {
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pricing .box img {
+    max-width: 80px;
+    margin-bottom: 40px;
+}
+
+.pricing .box ul li {
+    padding: 20px 180px 20px 10px ;
+    border-top: solid 1px #eee;
+}
+
+.pricing .box ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    margin-right: 10px;
+    font-weight: 900;
+    color: var(--main-color);
+    margin-left: 10px;
+}
+
+.pricing .box button {
+    width: fit-content;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid 2px var(--main-color);
+    color: var(--main-color);
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+    transition: 0.1s linear;
+    cursor: pointer;
+}
+
+.pricing .box button:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+/*End Pricing Plans*/
+
+/*start top videos*/
+.top-videos {
+    position: relative;
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.top-videos .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-videos img {
+    max-width: 800px;
+}
+
+@media (max-width: 1199px) {
+    .top-videos img {
+        max-width: 100%;
+    }
+}
+
+.top-videos .top div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.top-videos .top {
+    padding: 2px;
+    background-color: #eeeeee;
+    flex: 1;
+}
+
+.top-videos .top .sub-title {
+    padding: 20px;
+    background-color: white;
+    margin-top: 2px;
+    padding-right: 50px;
+    transition: var(--main-transition) linear;
+}
+
+@media (max-width: 860px) {
+    .top-videos .top {
+        width: 100%;
+    }
+}
+
+.top-videos .sub-title p {
+    margin-bottom: 12px;
+    transition: var(--main-transition) linear;
+}
+
+.top-videos .sub-title span {
+    color: #737373;
+}
+
+.top-videos .sub-title:hover p {
+    color: var(--main-color);
+}
+.top-videos .sub-title:hover {
+    background-color: #f5f4f4;
+    cursor: pointer;
+}
+
+.top-videos .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e7e5e5;
+    padding: 10px;
+}
+
+.top-videos .video p {
+    padding: 20px;
+    background-color: white;
+}
+/*end top videos*/
